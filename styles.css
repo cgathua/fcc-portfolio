@@ -1,0 +1,152 @@
+:root {
+    --color-primary:#202B2D;
+    --color-secondary:#FAA407;
+    --color-tertiary: #8B9494;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    border: 0;
+    list-style: none;
+    text-decoration: none; 
+    transition: 300ms; 
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--color-secondary);
+    padding: 1rem;
+}
+
+nav[id="navbar"] ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+nav[id="navbar"] a {
+    color: var(--color-primary);
+}
+
+nav[id="navbar"] a:hover {
+    color: var(--color-tertiary);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-primary);
+    font-family: 'Montserrat', sans-serif;
+    overflow: scroll;
+}
+
+h1, h2 {
+    color: var(--color-tertiary);
+    line-height: 1.2;
+    font-size: 3rem;
+}
+
+h3 {
+    color: var(--color-tertiary);
+    line-height: 1.2;
+    font-size: 2rem;
+    text-align: center;
+}
+
+p {
+    line-height: 1.2;
+    color: var(--color-tertiary);
+    font-size: 2rem;
+
+}
+main[id="main"] {
+    width: 100%;
+    margin: 0 auto;
+}
+
+section {
+    padding: 4rem;
+    max-width: 100vw;
+}
+
+section h1, h2, p{
+    text-align: center;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+img {
+    width: 100%;
+}
+
+
+section[id="projects"] {
+    background: var(--color-secondary);
+}
+
+section[id="projects"] .project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+section[id="projects"] h3 {
+    color: var(--color-primary);
+    text-align: left;
+}
+
+section[id="projects"] h2 {
+    color: var(--color-primary);
+}
+
+section[id="projects"] .demo {
+    display: flex;
+    gap: 2rem;
+}
+
+section[id="projects"] a {
+    color: var(--color-primary);
+}
+
+section[id="projects"] a:hover {
+    color: var(--color-tertiary);
+}
+
+
+section[id="contact"] {
+    background-color: var(--color-primary);
+    text-align: center;
+}
+
+section[id="contact"] .fa-2x {
+    color: var(--color-secondary);
+}
+
+section[id="contact"] .fa-2x:hover {
+    color: var(--color-tertiary);
+}
+
+footer[id="copyright"] {
+    background: var(--color-secondary);
+    color: var(--color-primary);
+    text-align: center;
+    padding: 1rem;
+}
+
+/* == MEDIA QUERIES(small phone) === */
+@media screen and (max-width: 480px) {
+    section[id="projects"] .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
